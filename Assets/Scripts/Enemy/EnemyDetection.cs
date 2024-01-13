@@ -45,6 +45,9 @@ public class EnemyDetection : MonoBehaviour
                     }
                 }
             }
+        } else
+        {
+            behavior.isAggro = false;
         }
     }
 }
