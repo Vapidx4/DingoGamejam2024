@@ -8,7 +8,7 @@ public class EnemyBehavior : MonoBehaviour
     public GameObject player;
     public bool isAggro;
     public NavMeshAgent agent;
-    public float maxAngle = 45;
+    public float angle = 45;
     public float maxDistance = 10;
     public float timer = 1.0f;
     public float visionCheckRate = 1.0f;
