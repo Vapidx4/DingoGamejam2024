@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
     private void ShootFireball()
     {
         // Instantiate the fireball at the spawn point
-        GameObject newFireball = Instantiate(fireball, spellSpawn.transform.position, spellSpawn.transform.rotation);
+        GameObject newFireball = Instantiate(fireball, spellSpawn.transform.position + new Vector3(0,0,1), spellSpawn.transform.rotation);
 
         // Get the Rigidbody component of the fireball
         Rigidbody fireballRb = newFireball.GetComponent<Rigidbody>();
