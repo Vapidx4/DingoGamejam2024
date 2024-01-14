@@ -123,126 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &442831045 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1677334750579945605, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-  m_PrefabInstance: {fileID: 498483240}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &442831046
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442831045}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1671c90638f256d40ab55526c34b9329, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!54 &442831049
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442831045}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!1001 &498483240
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1677334750579945604, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677334750579945604, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677334750579945604, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677334750579945604, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677334750579945604, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677334750579945604, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677334750579945604, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677334750579945604, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677334750579945604, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677334750579945604, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677334750579945605, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      propertyPath: m_Name
-      value: Gojo Red Hollow
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114876872377504100, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      propertyPath: hue
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1677334750579945605, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 442831046}
-    - targetCorrespondingSourceObject: {fileID: 1677334750579945605, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 442831049}
-  m_SourcePrefab: {fileID: 100100000, guid: c02d9ef745b89564b82fa23b1939b5fb, type: 3}
 --- !u!1 &540454134 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1780273883952397529, guid: 9fc1e8e15c601c74dae25a0fd56c206f, type: 3}
@@ -569,6 +449,11 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
+--- !u!1 &1835518878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8536013222139451016, guid: 9fc1e8e15c601c74dae25a0fd56c206f, type: 3}
+  m_PrefabInstance: {fileID: 4951413726151962037}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1905864604176450818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -802,6 +687,63 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 540454139}
   m_SourcePrefab: {fileID: 100100000, guid: 9fc1e8e15c601c74dae25a0fd56c206f, type: 3}
+--- !u!1001 &7739317043432830474
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 976985291926231528, guid: b155f5465954f64438356401de125fc3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 976985291926231528, guid: b155f5465954f64438356401de125fc3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 976985291926231528, guid: b155f5465954f64438356401de125fc3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 976985291926231528, guid: b155f5465954f64438356401de125fc3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976985291926231528, guid: b155f5465954f64438356401de125fc3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976985291926231528, guid: b155f5465954f64438356401de125fc3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976985291926231528, guid: b155f5465954f64438356401de125fc3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976985291926231528, guid: b155f5465954f64438356401de125fc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976985291926231528, guid: b155f5465954f64438356401de125fc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976985291926231528, guid: b155f5465954f64438356401de125fc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976985291926231529, guid: b155f5465954f64438356401de125fc3, type: 3}
+      propertyPath: m_Name
+      value: Gojo Red Hollow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b155f5465954f64438356401de125fc3, type: 3}
 --- !u!195 &8067693191442076509
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -841,8 +783,8 @@ MonoBehaviour:
   runSpeed: 8
   playerTransform: {fileID: 0}
   playerObj: {fileID: 1408073755}
-  fireball: {fileID: 442831045}
-  spellSpawn: {fileID: 0}
+  fireball: {fileID: 976985291926231529, guid: b155f5465954f64438356401de125fc3, type: 3}
+  spellSpawn: {fileID: 1835518878}
 --- !u!143 &8067693191442076511
 CharacterController:
   m_ObjectHideFlags: 0
@@ -877,5 +819,5 @@ SceneRoots:
   - {fileID: 700743034}
   - {fileID: 1905864604176450818}
   - {fileID: 4951413726151962037}
-  - {fileID: 498483240}
+  - {fileID: 7739317043432830474}
   - {fileID: 1656333930}
