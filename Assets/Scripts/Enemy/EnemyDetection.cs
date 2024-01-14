@@ -35,6 +35,7 @@ public class EnemyDetection : MonoBehaviour
             if (angle < detectionAngle)
             {
                 RaycastHit hit;
+                Debug.Log("Saw player in angle");
                 if (Physics.Raycast(transform.position, distToPlayer.normalized, out hit, targetDist))
                 {
                     Debug.Log(hit.collider.gameObject.name);
