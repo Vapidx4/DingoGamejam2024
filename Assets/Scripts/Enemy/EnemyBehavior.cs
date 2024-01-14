@@ -14,19 +14,19 @@ public class EnemyBehavior : MonoBehaviour
     public float visionCheckRate = 1.0f;
     public float speed;
     public Transform[] points;
+    private int destPoint = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        agent = GetComponent<NavMeshAgent>();
+        GotoNextPoint();
     }
 
     // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
-        
-=======
         if (isAggro)
         {
             agent.destination = player.transform.position;
@@ -90,6 +90,5 @@ public class EnemyBehavior : MonoBehaviour
             Debug.Log("Dead");
             //----------------------------------------------------G
         }
->>>>>>> Stashed changes
     }
 }
