@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     private InputManager _inputManager;
 
-    private Rigidbody _rb;
+    private CharacterController _rb;
     private float _vertSpeed;
     public float minFall = -1.5f;
     private bool isGrounded;
@@ -27,11 +27,22 @@ public class PlayerMovement : MonoBehaviour
     public Transform playerTransform;
     private Vector2 _currentInput;
 
+    private Animator characterAnimator;
+    private int _layerBase;
+    public GameObject playerObj;
+    public GameObject fireball;
+    public GameObject spellSpawn;
 
+    private float idle = 0f;
+    private float stun = 1f;
+    private float illuminate = 2f;
+    private float state;
 
     void Start() {
         _inputManager = InputManager.Instance;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        characterAnimator = playerObj.GetComponent<Animator>();
+        _layerBase = characterAnimator.GetLayerIndex("Base Layer");
         Cursor.lockState = CursorLockMode.Locked;
         playerCamera = Camera.main.transform;
 
@@ -39,15 +50,34 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<CharacterController>();
         _vertSpeed = minFall;
     }
 
     void Update() {
-        
         if (CanMove) 
             ProcessMovement();
+
+        // Check if the fire button is pressed
+        if (_inputManager.FireButtonPressed())
+        {
+            Debug.Log("Firing");
+            state = stun;
+            
+            ShootFireball();
+        }
+        else
+        {
+            state = idle;
+        }
+
+        characterAnimator.SetFloat("Hands", state);
         
+        // else
+        // {
+        //     state = idle;
+        // }
+        //
         // if (Input.GetMouseButtonDown(0)) {
         //     RaycastHit hit;
         //     if
@@ -58,11 +88,23 @@ public class PlayerMovement : MonoBehaviour
         // }
     }
     
+    private void ShootFireball()
+    {
+        // Instantiate the fireball at the spawn point
+        GameObject newFireball = Instantiate(fireball, spellSpawn.transform.position, spellSpawn.transform.rotation);
+
+        // Get the Rigidbody component of the fireball
+        Rigidbody fireballRb = newFireball.GetComponent<Rigidbody>();
+
+        // Apply force to the fireball in the forward direction
+        fireballRb.velocity = spellSpawn.transform.forward * 5f;
+    }
+    
     private void ProcessMovement()
     {
         float speed = GetMovementSpeed();
         CalculateMovementVector();
-        ApplyMovementToController();
+        // ApplyMovementToController();
         // RotatePlayerWithCamera();
     }
     
@@ -74,10 +116,14 @@ public class PlayerMovement : MonoBehaviour
         move.y = 0f;
         Vector3 right = _rb.transform.right;
         Vector3 forward = Vector3.Cross(right, Vector3.up);
+        _rb.Move(move * Time.deltaTime * GetMovementSpeed());
         
-        _moveDirection = (right * move.x) + (forward * move.y);
-        _moveDirection *= GetMovementSpeed();
-        _moveDirection = Vector3.ClampMagnitude(_moveDirection, GetMovementSpeed());
+        _rb.Move(_playerVelocity * Time.deltaTime);
+        
+        //
+        // _moveDirection = (right * move.x) + (forward * move.y);
+        // _moveDirection *= GetMovementSpeed();
+        // _moveDirection = Vector3.ClampMagnitude(_moveDirection, GetMovementSpeed());
 
         // float horInput = Input.GetAxis("Horizontal");
         // float vertInput = Input.GetAxis("Vertical");
@@ -90,17 +136,17 @@ public class PlayerMovement : MonoBehaviour
     }
     
     
-    private void ApplyMovementToController()
-    {
-        _moveDirection.y = _vertSpeed;
-        float speed = GetMovementSpeed();
-        _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")).normalized;
-        _moveDirection = transform.TransformDirection(_moveDirection);
-        _moveDirection *= speed;
-
-        _rb.velocity = new Vector3(_moveDirection.x, _rb.velocity.y, _moveDirection.z);
-    }
-    
+    // private void ApplyMovementToController()
+    // {
+    //     _moveDirection.y = _vertSpeed;
+    //     float speed = GetMovementSpeed();
+    //     _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")).normalized;
+    //     _moveDirection = transform.TransformDirection(_moveDirection);
+    //     _moveDirection *= speed;
+    //
+    //     _rb.velocity = new Vector3(_moveDirection.x, _rb.velocity.y, _moveDirection.z);
+    // }
+    //
     private void RotatePlayerWithCamera()
     {
         float mouseX = Input.GetAxis("Mouse X");

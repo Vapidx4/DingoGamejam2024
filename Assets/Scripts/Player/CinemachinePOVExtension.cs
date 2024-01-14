@@ -33,7 +33,7 @@ namespace Player
                     startingRotation.x += deltaInput.x * vSpeed * Time.deltaTime;
                     startingRotation.y += deltaInput.y * hSpeed * Time.deltaTime;
                     startingRotation.y = Mathf.Clamp(startingRotation.y, -clampAngle, clampAngle);
-                    playerTransform.localRotation = Quaternion.Euler(0f, startingRotation.x, 0f);
+                    // playerTransform.localRotation = Quaternion.Euler(0f, startingRotation.x, 0f);
 
                     state.RawOrientation = Quaternion.Euler(-startingRotation.y, startingRotation.x, 0f);
                 }
