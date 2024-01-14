@@ -113,11 +113,18 @@ public class PlayerMovement : MonoBehaviour
 
         // Get the Rigidbody component of the fireball
         Rigidbody fireballRb = newFireball.GetComponent<Rigidbody>();
+        
 
-        // Apply force to the fireball in the forward direction
-        fireballRb.velocity = spellSpawn.transform.forward * 5f;
+        // Get the forward direction of the camera
+        Vector3 cameraForward = playerCamera.forward;
+        
+        newFireball.transform.rotation = Quaternion.LookRotation(cameraForward);
+
+
+        // Apply force to the fireball in the forward direction of the camera
+        fireballRb.velocity = cameraForward * 5f;
     }
-    
+
     private void ShootLight()
     {
         // Instantiate the fireball at the spawn point
@@ -126,9 +133,13 @@ public class PlayerMovement : MonoBehaviour
         // Get the Rigidbody component of the fireball
         Rigidbody rb = newIllumination.GetComponent<Rigidbody>();
 
-        // Apply force to the fireball in the forward direction
-        rb.velocity = spellSpawn.transform.forward * 5f;
+        // Get the forward direction of the camera
+        Vector3 cameraForward = playerCamera.forward;
+
+        // Apply force to the fireball in the forward direction of the camera
+        rb.velocity = cameraForward * 5f;
     }
+
     
     private void ProcessMovement()
     {
