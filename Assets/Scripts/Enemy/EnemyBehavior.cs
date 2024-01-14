@@ -86,10 +86,11 @@ public class EnemyBehavior : MonoBehaviour
             StopMovement();
             Invoke("ResumeMovement", 2f);
         }
-        else if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == player.tag)
         {
             Debug.Log("Dead");
             //----------------------------------------------------Game Over UI
         }
+        Debug.Log("collision");
     }
 }
