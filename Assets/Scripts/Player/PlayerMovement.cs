@@ -31,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
     private int _layerBase;
     public GameObject playerObj;
     public GameObject fireball;
+    public GameObject illumination;
+    public int currSpell;
+
     public GameObject spellSpawn;
 
     private float idle = 0f;
@@ -59,13 +62,27 @@ public class PlayerMovement : MonoBehaviour
             ProcessMovement();
 
         // Check if the fire button is pressed
-        if (_inputManager.FireButtonPressed())
+        if (currSpell == 0)
         {
-            Debug.Log("Firing");
-            state = stun;
+            if (_inputManager.FireButtonHeld())
+            {
+                Debug.Log("Firing");
+                state = stun;
             
-            ShootFireball();
+                ShootFireball();
+            }
         }
+        else if(currSpell == 1)
+        {
+            if (_inputManager.FireButtonPressed())
+            {
+                Debug.Log("Firing");
+                state = stun;
+            
+                ShootFireball();
+            }
+        }
+        
         else
         {
             state = idle;
@@ -98,6 +115,18 @@ public class PlayerMovement : MonoBehaviour
 
         // Apply force to the fireball in the forward direction
         fireballRb.velocity = spellSpawn.transform.forward * 5f;
+    }
+    
+    private void ShootLight()
+    {
+        // Instantiate the fireball at the spawn point
+        GameObject newIllumination = Instantiate(illumination, spellSpawn.transform.position + new Vector3(0,0,1), spellSpawn.transform.rotation);
+
+        // Get the Rigidbody component of the fireball
+        Rigidbody rb = newIllumination.GetComponent<Rigidbody>();
+
+        // Apply force to the fireball in the forward direction
+        rb.velocity = spellSpawn.transform.forward * 5f;
     }
     
     private void ProcessMovement()
