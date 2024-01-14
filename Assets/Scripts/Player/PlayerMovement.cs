@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             ProcessMovement();
 
         // Check if the fire button is pressed
-        if (_inputManager.FireButtonHeld())
+        if (_inputManager.FireButtonPressed())
         {
             Debug.Log("Firing");
             state = stun;
