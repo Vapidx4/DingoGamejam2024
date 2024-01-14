@@ -306,7 +306,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8595913915942375726, guid: 11b68295b4c6d408ead3285f2561f0bc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8595913915942375726, guid: 11b68295b4c6d408ead3285f2561f0bc, type: 3}
+    - {fileID: 2664749816421851999, guid: 11b68295b4c6d408ead3285f2561f0bc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -452,7 +458,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 889107164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ecb4fc6f84247149adf8e7ab99391ba, type: 3}
+  m_Script: {fileID: 11500000, guid: c62eba02692a0844faae59f5915842cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minFall: -1.5
