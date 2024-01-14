@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         _layerBase = characterAnimator.GetLayerIndex("Base Layer");
         Cursor.lockState = CursorLockMode.Locked;
         playerCamera = Camera.main.transform;
+        currSpell = 1;
 
     }
 
@@ -69,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Firing");
                 state = stun;
             
-                ShootFireball();
+                ShootLight();
             }
         }
         else if(currSpell == 1)
