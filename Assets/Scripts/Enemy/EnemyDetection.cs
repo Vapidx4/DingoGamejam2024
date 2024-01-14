@@ -38,8 +38,8 @@ public class EnemyDetection : MonoBehaviour
                 Debug.Log("Saw player in angle");
                 if (Physics.Raycast(transform.position, distToPlayer.normalized, out hit, targetDist))
                 {
-                    Debug.Log(hit.collider.gameObject.name + " Raycast");
-                    if (hit.collider.gameObject.tag == Player.gameObject.tag)
+                    Debug.Log(hit.collider.gameObject.name);
+                    if (hit.collider.gameObject == Player.gameObject)
                     {
                         Debug.Log("GOcha !!!");//---------------------------------- Remove at some point
                         behavior.isAggro = true;

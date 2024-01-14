@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyBehavior : MonoBehaviour
 {
     public GameObject player;
-    public bool isAggro;
+    public bool isAggro = false;
     public NavMeshAgent agent;
     public float angle = 45;
     public float maxDistance = 10;
@@ -19,7 +19,6 @@ public class EnemyBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         GotoNextPoint();
     }
@@ -27,6 +26,14 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (agent == null)
+        {
+            Debug.Log("no agent");
+        }
+        if (player == null)
+        {
+            Debug.Log("no player");
+        }
         if (isAggro)
         {
             agent.destination = player.transform.position;
@@ -86,11 +93,10 @@ public class EnemyBehavior : MonoBehaviour
             StopMovement();
             Invoke("ResumeMovement", 2f);
         }
-        if (collision.gameObject.tag == player.tag)
+        else if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Dead");
             //----------------------------------------------------Game Over UI
         }
-        Debug.Log("collision");
     }
 }

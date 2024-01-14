@@ -18,7 +18,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 735600187897421833, guid: 9fc1e8e15c601c74dae25a0fd56c206f, type: 3}
       propertyPath: m_Name
-      value: Player 1 Variant
+      value: Player 1 (the right version)
+      objectReference: {fileID: 0}
+    - target: {fileID: 735600187897421833, guid: 9fc1e8e15c601c74dae25a0fd56c206f, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1441154136140582983, guid: 9fc1e8e15c601c74dae25a0fd56c206f, type: 3}
       propertyPath: m_Enabled
@@ -159,6 +163,9 @@ PrefabInstance:
     - {fileID: 8967543430260545745, guid: 9fc1e8e15c601c74dae25a0fd56c206f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 735600187897421833, guid: 9fc1e8e15c601c74dae25a0fd56c206f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 264816758960548760}
     - targetCorrespondingSourceObject: {fileID: 1838214237096206329, guid: 9fc1e8e15c601c74dae25a0fd56c206f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 700470441605108152}
@@ -363,3 +370,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 156227378078840467, guid: 9fc1e8e15c601c74dae25a0fd56c206f, type: 3}
   m_PrefabInstance: {fileID: 6304156400571123015}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6722111319725188430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 735600187897421833, guid: 9fc1e8e15c601c74dae25a0fd56c206f, type: 3}
+  m_PrefabInstance: {fileID: 6304156400571123015}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &264816758960548760
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6722111319725188430}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

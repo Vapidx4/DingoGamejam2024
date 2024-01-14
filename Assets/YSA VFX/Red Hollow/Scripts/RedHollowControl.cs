@@ -20,6 +20,8 @@ public class RedHollowControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.rotation = Quaternion.Euler(0, 180, 0);
+
         transform.GetChild(0).GetComponent<HueControl>().hue = hue;
     }
 
