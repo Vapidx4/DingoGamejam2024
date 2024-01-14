@@ -5838,6 +5838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697362851}
   - component: {fileID: 697362850}
+  - component: {fileID: 697362852}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -5956,6 +5957,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &697362852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697362849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b6d07034cf48b4b8514f0da9439687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aggroSound: {fileID: 8300000, guid: fff44c52d54b8e24081d637b2e85b6f5, type: 3}
 --- !u!4 &703373143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2801341302373484133, guid: cafb3b4966c8c144ebc1342e811a77e0, type: 3}
