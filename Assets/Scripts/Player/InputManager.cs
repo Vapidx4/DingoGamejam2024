@@ -54,4 +54,20 @@ using UnityEngine;
         {
             return _playerControls.Player.Jump.triggered;
         }
+        
+        public bool FireButtonPressed()
+        {
+            // Debug.Log(_playerControls.Player.Fire.triggered);
+            return _playerControls.Player.Fire.triggered;
+            // return _playerControls.Player.Fire.ReadValue<float>() > 0.0f;
+
+        }
+        
+        public bool FireButtonHeld()
+        {
+            // Debug.Log(_playerControls.Player.Fire.triggered);
+            // return _playerControls.Player.Fire.triggered;
+            return _playerControls.Player.Fire.ReadValue<float>() > 0.0f;
+
+        }
     }
