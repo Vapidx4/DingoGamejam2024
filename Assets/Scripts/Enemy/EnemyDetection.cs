@@ -34,13 +34,12 @@ public class EnemyDetection : MonoBehaviour
 
             if (angle < detectionAngle)
             {
-                Debug.Log("player in angle");
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, distToPlayer.normalized, out hit, Mathf.Infinity))
+                if (Physics.Raycast(transform.position, distToPlayer.normalized, out hit, targetDist))
                 {
-                    if (hit.collider.gameObject == Player.gameObject && hit.distance >= targetDist)
+                    Debug.Log(hit.collider.gameObject.name);
+                    if (hit.collider.gameObject == Player.gameObject)
                     {
-                        // Found player
                         Debug.Log("GOcha !!!");//---------------------------------- Remove at some point
                         behavior.isAggro = true;
                     }

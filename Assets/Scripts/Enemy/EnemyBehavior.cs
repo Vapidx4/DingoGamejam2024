@@ -77,7 +77,7 @@ public class EnemyBehavior : MonoBehaviour
         agent.velocity = Vector3.zero;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collider other)
     {
         if (other.gameObject.tag == "Projectile")
         {
@@ -86,6 +86,7 @@ public class EnemyBehavior : MonoBehaviour
 
         } else if (other.gameObject.tag == "Player")
         {
+            Debug.Log("Dead");
             //----------------------------------------------------Game Over UI
         }
     }
