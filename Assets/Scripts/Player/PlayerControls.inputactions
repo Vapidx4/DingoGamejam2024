@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Swap",
+                    "type": "Button",
+                    "id": "71c35114-969f-4ed4-9a65-b31fb8609bfb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -133,12 +142,12 @@
                 },
                 {
                     "name": "",
-                    "id": "f411dea3-1f64-4222-b5c4-c21e50584c44",
-                    "path": "",
+                    "id": "e5d8a543-2789-4d0e-976f-fdb6ff2df7d8",
+                    "path": "<Mouse>/middleButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Fire",
+                    "action": "Swap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

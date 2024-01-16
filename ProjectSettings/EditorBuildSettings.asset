@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: f456cd3bd046c1c4c86595b2ef1aeb12
   - enabled: 1
-    path: Assets/Scenes/NextScene.unity
-    guid: ec4b8d930af77674aab19d2214c58c53
+    path: Assets/Scenes/Dev/Zeyu/Showcase Artistic 1.unity
+    guid: 814c95e8d9e5b554cb35c09b3f52e29a
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 47c40d534d4d94f41bded55be8e813ea

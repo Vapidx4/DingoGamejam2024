@@ -320,7 +320,6 @@ GameObject:
   - component: {fileID: 8808467792032655512}
   - component: {fileID: 490843284833966506}
   - component: {fileID: 7346552693993193806}
-  - component: {fileID: 1840321933138026206}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -466,27 +465,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1840321933138026206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6537114121666326682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c62eba02692a0844faae59f5915842cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minFall: -1.5
-  walkSpeed: 5
-  runSpeed: 8
-  playerTransform: {fileID: 3482089333769386576}
-  playerObj: {fileID: 4258449629918552298}
-  fireball: {fileID: 976985291926231529, guid: b155f5465954f64438356401de125fc3, type: 3}
-  illumination: {fileID: 976985291926231529, guid: cd255fa95fcac9d4a94d9ffe67b23c7a, type: 3}
-  currSpell: 0
-  spellSpawn: {fileID: 8681455506082313572}
 --- !u!1 &6723261048284024077
 GameObject:
   m_ObjectHideFlags: 0

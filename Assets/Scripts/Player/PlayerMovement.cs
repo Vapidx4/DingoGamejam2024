@@ -62,6 +62,18 @@ public class PlayerMovement : MonoBehaviour
         if (CanMove) 
             ProcessMovement();
 
+        if (_inputManager.SwapButtonPressed())
+        {
+            if (currSpell == 0)
+            {
+                currSpell = 1;
+            }
+            else if (currSpell == 1)
+            {
+                currSpell = 0;
+            }
+        }
+
         // Check if the fire button is pressed
         if (currSpell == 0)
         {
@@ -109,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
     private void ShootFireball()
     {
         // Instantiate the fireball at the spawn point
-        GameObject newFireball = Instantiate(fireball, spellSpawn.transform.position + new Vector3(0,0,1), spellSpawn.transform.rotation);
+        GameObject newFireball = Instantiate(fireball, spellSpawn.transform.position /*+ new Vector3(0,0,1)*/, spellSpawn.transform.rotation);
 
         // Get the Rigidbody component of the fireball
         Rigidbody fireballRb = newFireball.GetComponent<Rigidbody>();

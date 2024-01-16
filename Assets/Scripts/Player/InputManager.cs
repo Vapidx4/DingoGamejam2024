@@ -62,7 +62,14 @@ using UnityEngine;
             // return _playerControls.Player.Fire.ReadValue<float>() > 0.0f;
 
         }
-        
+
+    public bool SwapButtonPressed()
+    {
+        // Debug.Log(_playerControls.Player.Fire.triggered);
+        return _playerControls.Player.Swap.triggered;
+        // return _playerControls.Player.Fire.ReadValue<float>() > 0.0f;
+    }
+
         public bool FireButtonHeld()
         {
             // Debug.Log(_playerControls.Player.Fire.triggered);

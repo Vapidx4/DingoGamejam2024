@@ -7,7 +7,7 @@ public class EnemyBehavior : MonoBehaviour
 {
     public GameObject player;
     public bool isAggro = false;
-    public NavMeshAgent agent;
+    private NavMeshAgent agent;
     public float angle = 45;
     public float maxDistance = 10;
     public float timer = 1.0f;
@@ -34,10 +34,12 @@ public class EnemyBehavior : MonoBehaviour
         {
             Debug.Log("no player");
         }
+
         if (isAggro)
         {
             agent.destination = player.transform.position;
             agent.speed = 1.2f * speed;
+            isAggro= false;
         }
         else
         {
